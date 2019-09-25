@@ -1,0 +1,33 @@
+{
+  "name": "es",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babel.config.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "core-js": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bulid-compile": "./node_modules/.bin/babel src --out-dir dist",
+    "build": "webpack",
+    "docker:build": "docker build -t 1015088819/es:latest .",
+    "docker:push": "docker push 1015088819/es:latest",
+    "docker-compose:pull": "docker-compose pull es",
+    "docker-compose:stop": "docker-compose stop es",
+    "docker-compose:start": "docker-compose up -d es"
+  },
+  "author": "",
+  "license": "ISC"
+}
